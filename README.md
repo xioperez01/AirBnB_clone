@@ -1,7 +1,7 @@
-[![GitHub issues](https://img.shields.io/github/issues/xioperez01/AirBnB_clone)](https://github.com/xioperez01/AirBnB_clone/issues)
-[![GitHub forks](https://img.shields.io/github/forks/xioperez01/AirBnB_clone?style=plastic)](https://github.com/xioperez01/AirBnB_clone/network)
-[![GitHub stars](https://img.shields.io/github/stars/xioperez01/AirBnB_clone?style=plastic)](https://github.com/xioperez01/AirBnB_clone/stargazers)
-
+[![GitHub issues](https://img.shields.io/github/issues/xioperez01/AirBnB_clone?style=plastic)](https://github.com/xioperez01/AirBnB_clone/issues)
+[![GitHub forks](https://img.shields.io/github/forks/xioperez01/AirBnB_clone?color=orange&style=plastic)](https://github.com/xioperez01/AirBnB_clone/network)
+[![GitHub stars](https://img.shields.io/github/stars/xioperez01/AirBnB_clone?color=violet&style=plastic)](https://github.com/xioperez01/AirBnB_clone/stargazers)
+[![Twitter](https://img.shields.io/twitter/url?style=social)](https://twitter.com/intent/tweet?text=Wow:&url=https%3A%2F%2Fgithub.com%2Fxioperez01%2FAirBnB_clone)
 # AirBnB_clone #
 **A command interpreter to manage your AirBnB objects.**
 
