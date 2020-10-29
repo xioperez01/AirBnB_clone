@@ -1,7 +1,11 @@
+[![GitHub issues](https://img.shields.io/github/issues/xioperez01/AirBnB_clone)](https://github.com/xioperez01/AirBnB_clone/issues)
+[![GitHub forks](https://img.shields.io/github/forks/xioperez01/AirBnB_clone?style=plastic)](https://github.com/xioperez01/AirBnB_clone/network)
+[![GitHub stars](https://img.shields.io/github/stars/xioperez01/AirBnB_clone?style=plastic)](https://github.com/xioperez01/AirBnB_clone/stargazers)
+
 # AirBnB_clone #
 **A command interpreter to manage your AirBnB objects.**
 
-This AirBnB clone consists of creating a shell to manage AirBnB objects.
+This **AirBnB** clone consists of creating a shell to manage AirBnB objects.
 As a command interpreter take the Shell example, but limited to a specific case. In this case, you want to be able to manage the project objects:
 * Create a new object (ex: a new User or a new Place)
 * Retrieve an object from a file, a database etc…
