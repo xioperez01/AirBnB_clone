@@ -47,7 +47,7 @@ class BaseModel():
         """ returns a dictionary containing all keys/values
         of __dict__ of the instance """
         dictionary = {}
-
+        dictionary["__class__"] = self.__class__.__name__
         for k, v in self.__dict__.items():
             if isinstance(v, (datetime, )):
                 dictionary[k] = v.isoformat()

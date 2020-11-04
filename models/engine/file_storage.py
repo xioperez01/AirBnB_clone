@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 import json
 from models.base_model import BaseModel
-""" Class File_storage """
+""" Class FileStorage """
 
 
 class FileStorage():
@@ -43,4 +43,3 @@ class FileStorage():
                 eval(key.split(".")[0] + '(**value)')
         except FileNotFoundError:
             pass
-        
