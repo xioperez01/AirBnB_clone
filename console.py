@@ -15,9 +15,9 @@ class HBNBCommand(cmd.Cmd):
         intro = "*****************************\n*\
                            *\n*       Welcome :)          *\n*\
                            *\n*****************************\n"
-        prompt = "(hbnb)"
+        prompt = "(hbnb) "
     else:
-        prompt = "(hbnb)\n"
+        prompt = "(hbnb) \n"
 
     def do_quit(self, arg):
         """ Quit command to exit the program """
