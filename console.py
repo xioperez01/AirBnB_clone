@@ -12,12 +12,12 @@ class HBNBCommand(cmd.Cmd):
     of the command interpreter """
     file = None
     if sys.stdin.isatty():
-        intro = "*****************************\n*\
+        """intro = "*****************************\n*\
                            *\n*       Welcome :)          *\n*\
-                           *\n*****************************\n"
-        prompt = "(hbnb) "
+                           *\n*****************************\n""""
+        prompt = "(hbnb)"
     else:
-        prompt = "(hbnb) \n"
+        prompt = "(hbnb)\n"
 
     def do_quit(self, arg):
         """ Quit command to exit the program """
