@@ -34,11 +34,13 @@ class FileStorage():
             json.dump(dictionary, f)
 
     def reload(self):
-        """ If json file exists, convert obj dicts back to instances"""
+        """ deserializes the JSON file to __objects
+        (only if the JSON file (__file_path) exists"""
         try:
             with open(FileStorage.__file_path) as fp:
                 data = json.load(fp)
+            for key, value in data.items():
+                eval(key.split(".")[0] + '(**value)')
         except FileNotFoundError:
-            return
-        for key, value in data.items():
-            eval(key.split(".")[0] + '(**value)')
+            pass
+        
