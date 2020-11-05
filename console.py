@@ -7,7 +7,13 @@ import cmd
 import sys
 from models.base_model import BaseModel
 from models import storage
-classes = {"BaseModel": BaseModel}
+from models.amenity import Amenity
+from models.city import City
+from models.place import Place
+from models.review import Review
+from models.state import State
+classes = {"BaseModel": BaseModel, "Amenity": Amenity, "City": City\
+        "Place": Place, "Review": Review, "State": State}
 
 
 class HBNBCommand(cmd.Cmd):

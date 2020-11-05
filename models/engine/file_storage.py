@@ -2,6 +2,11 @@
 """ Class FileStorage """
 import json
 from models.base_model import BaseModel
+from models.amenity import Amenity
+from models.city import City
+from models.place import Place
+from models.review import Review
+from models.state import State
 
 
 class FileStorage:
@@ -11,7 +16,8 @@ class FileStorage:
     # Private class attributes:
     __file_path = "file.json"
     __objects = {}
-    class_dict = {"BaseModel": BaseModel}
+    class_dict = {"BaseModel": BaseModel, "Amenity": Amenity, "City": City\
+        "Place": Place, "Review": Review, "State": State}
 
     # Public instance methods
     def all(self):
