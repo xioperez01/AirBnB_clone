@@ -5,6 +5,9 @@ of the command interpreter
 """
 import cmd
 import sys
+from models.base_model import BaseModel
+from models import storage
+classes = {"BaseModel": BaseModel}
 
 
 class HBNBCommand(cmd.Cmd):
@@ -29,8 +32,68 @@ class HBNBCommand(cmd.Cmd):
         return True
 
     def emptyline(self):
-        """ Shouldn’t execute anything """
+        """Do not execute anything\n"""
         pass
+
+    def do_create(self, arg):
+        """Creates a new instance\n"""
+        if len(arg) is 0:
+            print("** class name missing **")
+        elif arg not in classes:
+            print("** class doesn't exist **")
+        else:
+            new_instance = eval(arg)()
+            new_instance.save()
+            print(new_instance.id)
+
+    def do_show(self, arg):
+        """ Prints the string representation of an instance\n"""
+        line = arg.split()
+        if len(arg) is 0:
+            print("** class name missing **")
+        elif line[0] not in classes:
+            print("** class doesn't exist **")
+        elif len(line) != 2:
+            print("** instance id missing **")
+        else:
+            name = "{}.{}".format(line[0], line[1])
+            if name not in storage.all().keys():
+                print("** no instance found **")
+            else:
+                print(storage.all()[name])
+
+    def do_destroy(self, arg):
+        """Deletes an instance\n"""
+        line = arg.split()
+        if len(arg) is 0:
+            print("** class name missing **")
+        elif line[0] not in classes:
+            print("** class doesn't exist **")
+        elif len(line) != 2:
+            print("** instance id missing **")
+        else:
+            name = "{}.{}".format(line[0], line[1])
+            if name not in storage.all().keys():
+                print("** no instance found **")
+            else:
+                del storage.all()[name]
+                storage.save()
+
+    def do_all(self, arg):
+        """Prints all string representation of all instances\n"""
+        line = arg.split()
+        objects_list = []
+        if len(arg) is 0:
+            for objs in storage.all().values():
+                objects_list.append(objs)
+            print(objects_list)
+        elif line[0] not in classes:
+            print("** class doesn't exist **")
+        else:
+            for k, objs in storage.all().items():
+                if line[0] in k:
+                    objects_list.append(objs)
+            print(objects_list)
 
 
 if __name__ == '__main__':
