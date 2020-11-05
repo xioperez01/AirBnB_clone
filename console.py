@@ -101,6 +101,14 @@ class HBNBCommand(cmd.Cmd):
                     objects_list.append(objs)
             print(objects_list)
 
+    def do_count(self, arg):
+        """Update the number of instances of a class\n"""
+        count = 0
+        for key, objs in storage.all().items():
+            if arg in key:
+                count += 1
+            print(count)
+
 
 if __name__ == '__main__':
     '''main loop for console'''
