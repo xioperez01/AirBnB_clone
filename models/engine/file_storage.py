@@ -16,8 +16,8 @@ class FileStorage:
     # Private class attributes:
     __file_path = "file.json"
     __objects = {}
-    class_dict = {"BaseModel": BaseModel, "Amenity": Amenity, "City": City\
-        "Place": Place, "Review": Review, "State": State}
+    class_dict = {"BaseModel": BaseModel, "Amenity": Amenity, "City": City, "\
+        Place": Place, "Review": Review, "State": State}
 
     # Public instance methods
     def all(self):
