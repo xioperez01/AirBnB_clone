@@ -18,7 +18,7 @@ class FileStorage:
     __file_path = "file.json"
     __objects = {}
     class_dict = {"BaseModel": BaseModel, "Amenity": Amenity, "City": City, "\
-        Place": Place, "Review": Review, "State": State, "User": User}
+Place": Place, "Review": Review, "State": State, "User": User}
 
     # Public instance methods
     def all(self):
