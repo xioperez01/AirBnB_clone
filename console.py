@@ -110,7 +110,6 @@ class HBNBCommand(cmd.Cmd):
         id by adding or updating attribute\n-> Use: update ClassName \
 id attribute_name attribute_value <-\n"""
         line = arg.split()
-        check_id = "{}.{}".format(line[0], line[1])
         if len(arg) is 0:
             print("** class name missing **")
         elif line[0] not in classes:
@@ -118,6 +117,7 @@ id attribute_name attribute_value <-\n"""
         elif len(line) == 1:
             print("** instance id missing **")
         else:
+            check_id = "{}.{}".format(line[0], line[1])
             if check_id not in storage.all().keys():
                 print("** no instance found **")
             elif len(line) == 2:
