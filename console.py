@@ -43,7 +43,8 @@ class HBNBCommand(cmd.Cmd):
         pass
 
     def do_create(self, arg):
-        """Creates a new instance\n"""
+        """\n Creates a new instance and prints the id
+    -> Use: (hbnb ) create ClassName <-\n"""
         if len(arg) is 0:
             print("** class name missing **")
         elif arg not in classes:
@@ -54,7 +55,8 @@ class HBNBCommand(cmd.Cmd):
             print(new_instance.id)
 
     def do_show(self, arg):
-        """ Prints the string representation of an instance\n"""
+        """\n Prints the string representation of an instance
+    -> Use: (hbnb ) show ClassName id <-\n"""
         line = arg.split()
         if len(arg) is 0:
             print("** class name missing **")
@@ -70,7 +72,8 @@ class HBNBCommand(cmd.Cmd):
                 print(storage.all()[name])
 
     def do_destroy(self, arg):
-        """Deletes an instance\n"""
+        """\n Deletes an instance based on the class name and id
+    -> Use: (hbnb ) destroy ClassName id <-\n"""
         line = arg.split()
         if len(arg) is 0:
             print("** class name missing **")
@@ -87,7 +90,10 @@ class HBNBCommand(cmd.Cmd):
                 storage.save()
 
     def do_all(self, arg):
-        """Prints all string representation of all instances\n"""
+        """\n Prints all string representation of all instances
+    -> Use: (hbnb ) ClassName <-
+                or
+    -> Use: (hbnb ) all <-\n"""
         line = arg.split()
         if len(arg) is 0:
             for objs in storage.all().values():
@@ -99,8 +105,33 @@ class HBNBCommand(cmd.Cmd):
                 if line[0] in k:
                     print(storage.all()[k])
 
+    def do_update(self, arg):
+        """\n Updates an instance based on the class name and
+        id by adding or updating attribute\n-> Use: update ClassName \
+id attribute_name attribute_value <-\n"""
+        line = arg.split()
+        check_id = "{}.{}".format(line[0], line[1])
+        if len(arg) is 0:
+            print("** class name missing **")
+        elif line[0] not in classes:
+            print("** class doesn't exist **")
+        elif len(line) == 1:
+            print("** instance id missing **")
+        else:
+            if check_id not in storage.all().keys():
+                print("** no instance found **")
+            elif len(line) == 2:
+                print("** attribute name missing **")
+            elif len(line) == 3:
+                print("** value missing **")
+            else:
+                cast = type(eval(line[3]))
+                arg_3 = line[3].strip('"')
+                setattr(storage.all()[check_id], line[2], cast(arg_3))
+                storage.all()[check_id].save()
+
     def do_count(self, arg):
-        """Update the number of instances of a class\n"""
+        """\n Update the number of instances of a class\n"""
         count = 0
         for k, objs in storage.all().items():
             if arg in k:
