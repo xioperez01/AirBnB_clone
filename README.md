@@ -11,13 +11,14 @@ As a command interpreter take the Shell example, but limited to a specific case.
 * Do operations on objects (count, compute stats, etc…)
 * Update attributes of an object
 * Destroy an object
-## How to install it? :question: :question: ##
+## How does it work? ##
+### How to install it? :question: ###
 To have this repository and its content, you must execute the following on your terminal:
 ~~~
 $ git clone https://github.com/xioperez01/AirBnB_clone.git
 $cd AirBnB_Clone
 ~~~
-## How to use it? :question: :question: ##
+### How to use it? :question: ###
 You can use it in interactive mode:
 ~~~
 $ ./console.py
@@ -54,6 +55,34 @@ EOF  help  quit
 (hbnb) 
 $
 ~~~
+### Examples ###
+* Execution:
+~~~
+$ ./console.py
+*****************************
+*                           *
+*       Welcome :)          *
+*                           *
+*****************************
+
+(hbnb) 
+~~~
+* Somme commands:
+~~~
+*****************************
+*                           *
+*       Welcome :)          *
+*                           *
+*****************************
+
+(hbnb) help quit
+Quit command to exit the program
+
+(hbnb) create User
+032c2cc0-9e74-4caf-8d48-13f7a304cf81
+(hbnb)
+~~~
+**Now you know how to use it, have a happy coding :)**
 ## Environment ##
 * Languages: Python3.4.3
 * OS: Ubuntu 14.04 LTS
