@@ -89,18 +89,15 @@ class HBNBCommand(cmd.Cmd):
     def do_all(self, arg):
         """Prints all string representation of all instances\n"""
         line = arg.split()
-        objects_list = []
         if len(arg) is 0:
             for objs in storage.all().values():
-                objects_list.append(objs)
-            print(objects_list)
+                print(objs)
         elif line[0] not in classes:
             print("** class doesn't exist **")
         else:
             for k, objs in storage.all().items():
                 if line[0] in k:
-                    objects_list.append(objs)
-            print(objects_list)
+                    print(storage.all()[k])
 
     def do_count(self, arg):
         """Update the number of instances of a class\n"""
