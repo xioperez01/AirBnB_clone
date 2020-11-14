@@ -11,6 +11,12 @@ As a command interpreter take the Shell example, but limited to a specific case.
 * Do operations on objects (count, compute stats, etc…)
 * Update attributes of an object
 * Destroy an object
+## Directory content ##
+| Directory Name | Description |
+| ------------- |:-------------:|
+| models | It contains everything corresponding to the creation and operation of the console |
+| test | Contains the test cases with which the operation of the console was evaluated |
+| web_static | Contains those corresponding to the creation of the web interface |
 ## How does it work? ##
 ### How to install it? :question: ###
 To have this repository and its content, you must execute the following on your terminal:
@@ -82,12 +88,6 @@ Quit command to exit the program
 032c2cc0-9e74-4caf-8d48-13f7a304cf81
 (hbnb)
 ~~~
-## Directory content ##
-| Directory Name | Description |
-| ------------- |:-------------:|
-| models | It contains everything corresponding to the creation and operation of the console |
-| test | Contains the test cases with which the operation of the console was evaluated |
-| web_static | Contains those corresponding to the creation of the web interface |
 
 **Now you know how to use it, have a happy coding :)**
 ## Environment ##
