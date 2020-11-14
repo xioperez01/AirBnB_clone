@@ -82,12 +82,20 @@ Quit command to exit the program
 032c2cc0-9e74-4caf-8d48-13f7a304cf81
 (hbnb)
 ~~~
+## Directory content ##
+| Directory Name | Description |
+| ------------- |:-------------:|
+| models | It contains everything corresponding to the creation and operation of the console |
+| test | Contains the test cases with which the operation of the console was evaluated |
+| web_static | Contains those corresponding to the creation of the web interface |
+
 **Now you know how to use it, have a happy coding :)**
 ## Environment ##
 * Languages: Python3.4.3
 * OS: Ubuntu 14.04 LTS
 * Compiler: python3
 * PEP 8 - [Style](https://www.python.org/dev/peps/pep-0008/) // [Docstring](https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html)
+* [W3C-Validator](https://github.com/holbertonschool/W3C-Validators) Compiler and validator for **web_static**
 ## Autors :ribbon: ##
  Angie Pérez [![M](https://upload.wikimedia.org/wikipedia/fr/thumb/c/c8/Twitter_Bird.svg/30px-Twitter_Bird.svg.png)](https://twitter.com/xiommyperez)
 
