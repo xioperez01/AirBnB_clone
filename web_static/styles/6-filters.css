@@ -25,7 +25,8 @@ section.filters button:hover {
     opacity: 90%;
 }
 /* Location and Amenities inside flex box*/
-section.filters > div {
+section.filters .location,
+section.filters .amenities {
     height: 100%;
     width: 25%;
 }
@@ -42,7 +43,8 @@ section.filters >div ul.popover {
     position: relative;
     top: -11px;
 }
-section.filters >div:hover .popover{
+section.filters .location:hover .popover,
+section.filters .amenities:hover .popover {
     display: block;
 }
 /* li */
@@ -53,7 +55,7 @@ li {
     left: -15px;
 }
 /* h2 text */
-section.filters >div h2 {
+section.filters .popover h2 {
     font-size: 16px;
     position: relative;
 }
